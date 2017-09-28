@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="div-title">
+    <h1>
+      Welcome to {{title}}!
+    </h1>
+  </div>
+  <!-- DataBinding Template  Starts -->
+  <!-- <div class="div-details" [style.color]="hero.color" *ngIf="hero.name">{{hero.name}} details</div>
+  <div class="div-body">
+    <div class="div-label"><label>id :</label>{{hero.id}} </div>
+    <div class="div-hero">
+      <label>name :</label>
+      <input type="text" [(ngModel)]="hero.name"/>
+    </div>
+  </div> -->
+  <!-- DataBinding Template  Ends -->
+  
+  <ul class="ul-class" >
+    <li *ngFor="let hero of Heroes" (click)='onSelectHero(hero)' >{{hero.name}}
+      <span class="inline-span">{{hero.id}}</span>
+  
+    </li>
+  </ul>
+  
+  <div *ngIf="selectedHero">
+    <h2>{{selectedHero.name | uppercase}} details!</h2>
+    <button (click)="gotoDetail()">View Details</button>
+  </div>
+
+  <!-- <app-hero-detail  [hero] = "selectedHero" ></app-hero-detail> -->
