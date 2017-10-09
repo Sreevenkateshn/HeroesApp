@@ -13,7 +13,11 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./hero.detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-  constructor(private heroService : HeroService, private route :ActivatedRoute, private location : Location) { }
+  constructor(private heroService : HeroService, private route :ActivatedRoute, private location : Location) { 
+
+    console.log("git commit")
+    //here im git commit
+  }
   @Input() hero : Hero;
   ngOnInit() {
     console.log("ngOnInit is called right after the directive's data-bound properties have been checked for the first time, and before any of its children have been checked. It is invoked only once when the directive is instantiated.");
